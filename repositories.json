@@ -1,0 +1,11 @@
+{
+  "basePath": "/home/pi/proj/",
+  "mumble-telegram-bridge": {
+    "commands": [
+      "git pull",
+      "docker build -t mumble-telegram-bridge .",
+      "docker stop mtb",
+      "docker run -d --restart unless-stopped --name mtb mumble-telegram-bridge"
+    ]
+  }
+}
